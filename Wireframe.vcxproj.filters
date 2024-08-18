@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{1CA10C65-086E-6770-3187-55181DB39CFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\Wireframe">
+      <UniqueIdentifier>{ED17E77D-D9FB-A7D3-425C-A2262E5F9255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\Wireframe\Core">
+      <UniqueIdentifier>{65383D19-D16F-85B0-DA79-E9D34630ACA9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\Wireframe\Pipeline">
+      <UniqueIdentifier>{B2FA4999-1E08-787F-A7EE-736A13FB4336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\Wireframe\Util">
+      <UniqueIdentifier>{5A2B4719-C662-8FB0-CF6C-F3D33B23B6A9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\Wireframe\CommandBuffer.hpp">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Core\DesktopSwapchain.hpp">
+      <Filter>includes\Wireframe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Core\DesktopWindow.hpp">
+      <Filter>includes\Wireframe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Core\GPU.hpp">
+      <Filter>includes\Wireframe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\FrameBuffer.hpp">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\MeshBuffer.hpp">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Pipeline\GraphicsPipeline.hpp">
+      <Filter>includes\Wireframe\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Pipeline\PipelineLayout.hpp">
+      <Filter>includes\Wireframe\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Pipeline\PipelineSettings.hpp">
+      <Filter>includes\Wireframe\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Pipeline\VertexInputDesc.hpp">
+      <Filter>includes\Wireframe\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Renderpass.hpp">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Shader.hpp">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\SyncObjects.hpp">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Util\Attachment.hpp">
+      <Filter>includes\Wireframe\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\Util\Subpass.hpp">
+      <Filter>includes\Wireframe\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\vk_initializers.h">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\vk_mesh.h">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Wireframe\vk_types.h">
+      <Filter>includes\Wireframe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DesktopWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vk_initializers.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vk_mesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
