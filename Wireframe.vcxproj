@@ -77,8 +77,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;VK_USE_PLATFORM_WIN32_KHR;Desktop_Build;Window_Build;BTD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>includes;..\Venders\ImGUI;..\Venders\SDL\include;C:\VulkanSDK\1.3.283.0\Include;..\Venders\VMA\include;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\VKBootstrap\src;..\Venders\STB;..\Venders\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;GLM_ENABLE_EXPERIMENTAL;Desktop_Build;Window_Build;VK_USE_PLATFORM_WIN32_KHR;BTD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>includes;C:\VulkanSDK\1.3.283.0\Include;..\Venders\SDL\include;..\Venders\STB;..\Venders\GLM;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\ImGUI;..\Venders\VKBootstrap\src;..\Venders\VMA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -101,8 +101,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;VK_USE_PLATFORM_WIN32_KHR;Desktop_Build;Window_Build;BTD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>includes;..\Venders\ImGUI;..\Venders\SDL\include;C:\VulkanSDK\1.3.283.0\Include;..\Venders\VMA\include;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\VKBootstrap\src;..\Venders\STB;..\Venders\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;GLM_ENABLE_EXPERIMENTAL;Desktop_Build;Window_Build;VK_USE_PLATFORM_WIN32_KHR;BTD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>includes;C:\VulkanSDK\1.3.283.0\Include;..\Venders\SDL\include;..\Venders\STB;..\Venders\GLM;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\ImGUI;..\Venders\VKBootstrap\src;..\Venders\VMA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -128,8 +128,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;VK_USE_PLATFORM_WIN32_KHR;Desktop_Build;Window_Build;BTD_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>includes;..\Venders\ImGUI;..\Venders\SDL\include;C:\VulkanSDK\1.3.283.0\Include;..\Venders\VMA\include;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\VKBootstrap\src;..\Venders\STB;..\Venders\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLM_FORCE_DEPTH_ZERO_TO_ONE;GLM_FORCE_RADIANS;GLM_ENABLE_EXPERIMENTAL;Desktop_Build;Window_Build;VK_USE_PLATFORM_WIN32_KHR;BTD_DIST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>includes;C:\VulkanSDK\1.3.283.0\Include;..\Venders\SDL\include;..\Venders\STB;..\Venders\GLM;..\Venders\FMT\include;..\BTDSTD2\includes;..\Venders\ImGUI;..\Venders\VKBootstrap\src;..\Venders\VMA\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -151,6 +151,8 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Venders\VKBootstrap\src\VkBootstrap.h" />
+    <ClInclude Include="..\Venders\VKBootstrap\src\VkBootstrapDispatch.h" />
     <ClInclude Include="includes\Wireframe\CommandBuffer.hpp" />
     <ClInclude Include="includes\Wireframe\Core\DesktopSwapchain.hpp" />
     <ClInclude Include="includes\Wireframe\Core\DesktopWindow.hpp" />
@@ -171,9 +173,16 @@
     <ClInclude Include="includes\Wireframe\vk_types.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Venders\VKBootstrap\src\VkBootstrap.cpp" />
     <ClCompile Include="src\DesktopWindow.cpp" />
+    <ClCompile Include="src\build.cpp" />
     <ClCompile Include="src\vk_initializers.cpp" />
     <ClCompile Include="src\vk_mesh.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BTDSTD2\BTDSTD.vcxproj">
+      <Project>{8A3EEAA7-76E0-147E-5F9B-28D24BDC9BCE}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

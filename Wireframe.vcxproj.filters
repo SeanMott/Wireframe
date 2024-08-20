@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Venders">
+      <UniqueIdentifier>{DC2768D3-4807-E76E-511F-7245BD7D4DD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Venders\VKBootstrap">
+      <UniqueIdentifier>{6A1F8CC8-D680-69D6-5FEE-AF88CB4EA095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Venders\VKBootstrap\src">
+      <UniqueIdentifier>{81821D67-EDB9-65FE-F6C3-C921627A8CF7}</UniqueIdentifier>
+    </Filter>
     <Filter Include="includes">
       <UniqueIdentifier>{1CA10C65-086E-6770-3187-55181DB39CFE}</UniqueIdentifier>
     </Filter>
@@ -21,6 +30,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Venders\VKBootstrap\src\VkBootstrap.h">
+      <Filter>Venders\VKBootstrap\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Venders\VKBootstrap\src\VkBootstrapDispatch.h">
+      <Filter>Venders\VKBootstrap\src</Filter>
+    </ClInclude>
     <ClInclude Include="includes\Wireframe\CommandBuffer.hpp">
       <Filter>includes\Wireframe</Filter>
     </ClInclude>
@@ -77,7 +92,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Venders\VKBootstrap\src\VkBootstrap.cpp">
+      <Filter>Venders\VKBootstrap\src</Filter>
+    </ClCompile>
     <ClCompile Include="src\DesktopWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\build.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\vk_initializers.cpp">
