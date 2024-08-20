@@ -27,6 +27,7 @@ bool Wireframe::Window::DesktopWindow::Create(const DesktopWindow_CreateInfo& in
 		return false;
 	}
 
+	isRunning = true;
 	return true;
 }
 
